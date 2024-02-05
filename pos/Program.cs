@@ -84,12 +84,6 @@ public class PosDevice
         
     }
 
-    public virtual void Reading(string x)
-    {
-        StreamReader fileReader = new StreamReader($"K:\\sajad\\myRepository\\Active SMS verification\\{x.ToString()}+.txt");
-        
-        var result = fileReader.ReadLine();
-       
-    }
+   
    
 }
