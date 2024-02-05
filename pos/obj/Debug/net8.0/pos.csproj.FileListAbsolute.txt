@@ -1,0 +1,15 @@
+K:\sajad\myRepository\pos\bin\Debug\net8.0\pos.exe
+K:\sajad\myRepository\pos\bin\Debug\net8.0\pos.deps.json
+K:\sajad\myRepository\pos\bin\Debug\net8.0\pos.runtimeconfig.json
+K:\sajad\myRepository\pos\bin\Debug\net8.0\pos.dll
+K:\sajad\myRepository\pos\bin\Debug\net8.0\pos.pdb
+K:\sajad\myRepository\pos\obj\Debug\net8.0\pos.GeneratedMSBuildEditorConfig.editorconfig
+K:\sajad\myRepository\pos\obj\Debug\net8.0\pos.AssemblyInfoInputs.cache
+K:\sajad\myRepository\pos\obj\Debug\net8.0\pos.AssemblyInfo.cs
+K:\sajad\myRepository\pos\obj\Debug\net8.0\pos.csproj.CoreCompileInputs.cache
+K:\sajad\myRepository\pos\obj\Debug\net8.0\pos.sourcelink.json
+K:\sajad\myRepository\pos\obj\Debug\net8.0\pos.dll
+K:\sajad\myRepository\pos\obj\Debug\net8.0\refint\pos.dll
+K:\sajad\myRepository\pos\obj\Debug\net8.0\pos.pdb
+K:\sajad\myRepository\pos\obj\Debug\net8.0\pos.genruntimeconfig.cache
+K:\sajad\myRepository\pos\obj\Debug\net8.0\ref\pos.dll
