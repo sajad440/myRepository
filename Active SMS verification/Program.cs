@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.IO;
 
 internal class Program
 {
@@ -115,7 +115,7 @@ public void AddCard()
         {
            if(ExpirationMonth<=12&&ExpirationMonth>=1)
            {
-           ExpirationDate.WriteLine(ExpirationYear +"/"+ ExpirationMonth);
+           ExpirationDate.WriteLine(ExpirationYear + ExpirationMonth);
             
             ExpirationDate.Close();
 

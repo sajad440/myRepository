@@ -1,21 +1,21 @@
-using System.Security.Cryptography.X509Certificates;
-
-internal class Program
+﻿public  class Program
 {
-    private static void Main(string[] args)
+    public static void Main(string[] args)
     {
         PosDevice pos1 = new PosDevice();
+        bool exit = false ;
+        bool wrongInformation= false;
         
         pos1.UserPrice();
-
         pos1.UserCardNumer();
-        /*
         pos1.Username();
-        pos1.Userfamily();
         pos1.UserCvv2();
         pos1.UserExpirationDate();
-        System.Console.WriteLine("please wait");
-        */
+        pos1.UserDynamicCode();
+        System.Console.WriteLine(" please wait...");
+        pos1.ValidationOfInformation();
+        
+        
        
         
     
@@ -27,8 +27,8 @@ public class PosDevice
     public string CardNumber { get; set; }
     public int CVV2 { get; set; }
     public string Name { get; set; }
-    public string Family { get; set; }
     public int expirationDate { get; set; }
+    public int DynamicCode { get; set; }
     public void UserPrice()
     {
     
@@ -53,14 +53,16 @@ public class PosDevice
     {
         System.Console.WriteLine("enter your name");
         var Uname = Console.ReadLine();
-          Name = Uname;
-    }
-    public void Userfamily()
-    {
+    
         System.Console.WriteLine("enter your family ");
         var Ufamily = Console.ReadLine();
-        Family =  Ufamily;
+        
+        var NF = Uname + " " + Ufamily; 
+        Name = NF;
     }
+    
+      
+   
 
     public void UserExpirationDate()
     {
@@ -75,7 +77,78 @@ public class PosDevice
         expirationDate = Date;
         
     }
+    public void UserDynamicCode()
+    {
+        System.Console.WriteLine("enter your dynamic code :");
+        var code =Convert.ToInt32(Console.ReadLine());
+        DynamicCode =code;
+    }
+    public void ValidationOfInformation()
+    {
 
+       StreamReader cardnumberReader = new StreamReader($"K:\\sajad\\myRepository\\Active SMS verification\\CardList.txt");
+        var cardnumberResult = cardnumberReader.ReadLine();
+        cardnumberReader.Close();
+
+        StreamReader cvv2Reader = new StreamReader($"K:\\sajad\\myRepository\\Active SMS verification\\cv2.txt");
+        var cvv2Result = cvv2Reader.ReadLine();
+        cvv2Reader.Close();
+
+        StreamReader nameReader = new StreamReader($"K:\\sajad\\myRepository\\Active SMS verification\\NameAndFamily.txt");
+        var nameResult = nameReader.ReadLine();
+        nameReader.Close();
+
+        StreamReader ExpirationDateReader = new StreamReader($"K:\\sajad\\myRepository\\Active SMS verification\\expiration.txt");
+        var ExpirationDateResult = ExpirationDateReader.ReadLine();
+        ExpirationDateReader.Close();
+
+        StreamReader DynamicCodeReader = new StreamReader($"K:\\sajad\\myRepository\\Active SMS verification\\dynamicCode.txt");
+        var DynamicCodeResult =DynamicCodeReader.ReadLine();
+        DynamicCodeReader.Close();
+        bool Wrong = false;
+
+        if(CardNumber==cardnumberResult)
+         {
+            if (Name ==nameResult)
+             {
+                if(CVV2.ToString()==cvv2Result)
+                 {
+                    if (expirationDate.ToString()==ExpirationDateResult)
+                     {
+                        if(DynamicCode.ToString()==DynamicCodeResult)
+                         {
+                            System.Console.WriteLine("Successful transaction");
+                         }
+                         else
+                         {
+                            System.Console.WriteLine("wrong Code");
+                            Wrong =true;
+                         }
+                     }
+                     else 
+                     {
+                        System.Console.WriteLine("wrong Date");
+                            Wrong =true;
+                     }
+                 }
+                 else
+                 {
+                    System.Console.WriteLine("wrong cvv2 ");
+                     Wrong =true;
+                 }
+             }
+             else
+             {
+                System.Console.WriteLine("wrong name and family");
+                            Wrong =true;
+             }
+         }
+         else
+         {
+            System.Console.WriteLine("wrong Card number");
+            Wrong =true;
+         }
+    }
    
    
 }
