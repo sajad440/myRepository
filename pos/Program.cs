@@ -1,4 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
+using System.Security.Cryptography.X509Certificates;
 
 internal class Program
 {
@@ -41,14 +41,6 @@ public class PosDevice
         System.Console.WriteLine("please enter the card you have saved ");
         var UserCardInput =Console.ReadLine(); 
         CardNumber = UserCardInput ;
-    
-        StreamReader fileReader = new StreamReader($"K:\\sajad\\myRepository\\Active SMS verification\\CardList.txt");
-        var result = fileReader.ReadLine();
-        fileReader.Close();
-        
-
-
-
     }
     public void UserCvv2()
     {
