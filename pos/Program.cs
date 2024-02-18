@@ -1,10 +1,9 @@
-﻿public  class Program
+public  class Program
 {
     public static void Main(string[] args)
     {
         PosDevice pos1 = new PosDevice();
         bool exit = false ;
-        bool wrongInformation= false;
         
         pos1.UserPrice();
         pos1.UserCardNumer();
