@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Active SMS verification/Active SMS verification.csproj",
+                "${workspaceFolder}/pos/pos.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/Active SMS verification/Active SMS verification.csproj",
+                "${workspaceFolder}/pos/pos.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/Active SMS verification/Active SMS verification.csproj"
+                "${workspaceFolder}/pos/pos.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

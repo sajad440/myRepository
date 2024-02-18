@@ -69,7 +69,6 @@ public void AddCard()
    {
      System.Console.WriteLine("enter your card number (16 digits)");
     var usercard = Console.ReadLine();
-    var alphabet = new char[]{'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q'};
     if(usercard.Length==16)
     {
        
@@ -105,7 +104,7 @@ public void AddCard()
     }
      //user Expiration will write in a .txt 
     System.Console.WriteLine("enter your expiration year :");
-    var Expirationy = (Console.ReadLine());
+    var Expirationy = Console.ReadLine();
     var ExpirationYear = int.Parse(Expirationy);
     
     System.Console.WriteLine("enter your expiration month : ");
@@ -115,7 +114,7 @@ public void AddCard()
         {
            if(ExpirationMonth<=12&&ExpirationMonth>=1)
            {
-           ExpirationDate.WriteLine(ExpirationYear + ExpirationMonth);
+           ExpirationDate.WriteLine(ExpirationYear +" "+ ExpirationMonth);
             
             ExpirationDate.Close();
 
@@ -129,16 +128,17 @@ public void AddCard()
         }
         Console.Clear();
         System.Console.WriteLine("your card info was saved succses !");
-   }
+  }
     
     
-   }
- }
+  }
+}
  
  public void ShowCards()
  {
     string text =@"K:\\sajad\\myRepository\\Active SMS verification\\CardList.txt";
-    string t = File.ReadAllText(text);
+    string t = File.ReadAllText(text) ;
+    
     
    Console.WriteLine("your info"+"\n"+t);
  }
@@ -151,11 +151,6 @@ public  void CodeMaker()
   DCode.WriteLine(result);
   DCode.Close();
   System.Console.WriteLine($"your code is : {result} \n dont share this code ! ");
-
-  
-
-
-
 }
 
 }
