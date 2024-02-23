@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Active SMS verification")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1bce1d2f2bd579a053a3b1bffd0692d8d76e759a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fad82e352cea29511615e8f91a179e05097d8b11")]
 [assembly: System.Reflection.AssemblyProductAttribute("Active SMS verification")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Active SMS verification")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
