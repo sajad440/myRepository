@@ -1,5 +1,0 @@
-your transaction was succsessful . 
- price : 14000000 
- card number  : 1234567891234567 
- name and family : sajad akhlaghi  
- expiration Date : 1402 12  
